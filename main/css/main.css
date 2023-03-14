@@ -39,11 +39,12 @@ header {
 
 h1 {
   color: #C4F2EE;
+  font-size: 2rem;
 }
 
 .game {
   height: calc(100vh - 80px);
-  height: calc(var(--vh, 1vh) * 100 - 80px);
+  height: calc(var(--vh, 1vh) * 100 - 70px);
 }
 
 .play {

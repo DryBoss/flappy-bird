@@ -43,12 +43,13 @@ body {
   }
   h1 {
     color: $hover;
+    font-size: 2rem;
   }
 
   //play section
   .game {
     height: calc(100vh - 80px); //Fallback for browsers that do not support Custom Properties
-    height: calc(var(--vh, 1vh) * 100 - 80px);
+    height: calc(var(--vh, 1vh) * 100 - 70px);
   }
 
   .play {
