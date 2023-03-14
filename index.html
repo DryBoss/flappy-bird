@@ -17,6 +17,7 @@
 
   <!--js-->
   <script src="main/js/main.js" defer type="module"></script>
+  <script src="main/js/style.js" defer type="module"></script>
 
   <!--style sheet-->
   <link rel="stylesheet" href="main/css/main.css">
@@ -25,9 +26,24 @@
 <body>
   <header>
     <h1>Flappy Bird</h1>
+
+    <div class="score">
+      <p id="score">score <span>0</span></p>
+      <p id="high-score">high score <span>0</span></p>
+    </div>
   </header>
 
-  <button><img src="https://img.icons8.com/ios-filled/50/0D0D0D/caps-lock-on--v1.png"/></button>
+  <div class="play">
+    <p>press to play</p>
+  </div>
+
+  <div class="game">
+
+  </div>
+  <div class="bird"></div>
+
+  <button id="jump"><img src="https://img.icons8.com/ios-filled/50/0D0D0D/caps-lock-on--v1.png"/></button>
+
   <footer>
     <a href="http://fb.com" target="_blank">Source Code</a>
     <p>Created by <a href="http://fb.com" target="_blank">DryBoss</a></p>

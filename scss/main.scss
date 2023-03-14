@@ -34,13 +34,63 @@ body {
 
   //header
   header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
     background-color: $background;
+    line-height: 15px;
   }
   h1 {
     color: $hover;
   }
 
+  //play section
+  .game {
+    height: calc(100vh - 80px); //Fallback for browsers that do not support Custom Properties
+    height: calc(var(--vh, 1vh) * 100 - 80px);
+  }
+
+  .play {
+    position: absolute;
+    z-index: 10;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $background;
+  }
+
+  //game
+
+  #jump {
+    position: absolute;
+    z-index: 10;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    bottom: 5px;
+    width: 50px;
+    height: 50px;
+    background-color: $text;
+    border: 2px solid $background;
+    border-radius: 10px;
+  }
+  #jump:hover {
+    background-color: $hover;
+  }
+  #jump img {
+    width: 80%;
+  }
+
   //footer
   footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
     background-color: $background;
+  }
+
+  footer  a {
+    position: relative;
+    z-index: 10;
   }
