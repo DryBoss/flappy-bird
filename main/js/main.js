@@ -1,18 +1,13 @@
-import { dropBird } from "./bird.js";
+import { dropBird, jumpBird, resetBird } from "./bird.js";
+import { birdStatus } from "./control.js";
 
-const p2p = document.querySelector(".play");
+resetBird();
 
-window.addEventListener("keydown", event => {
-  switch (event.key) {
-    case "w":
-    case "ArrowUp":
-    case " ":
-      p2p.style.display = "none";
-  }
-})
-
-setInterval(updateGame(), 1000);
+setInterval(updateGame, 10);
 
 function updateGame() {
+  if (birdStatus === "jump") {
+    jumpBird();
+  }
   dropBird();
 };
