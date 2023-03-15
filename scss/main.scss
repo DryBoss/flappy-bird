@@ -2,6 +2,9 @@
 $background: #0D0D0D;
 $text: #F2F2F2;
 $hover: #C4F2EE;
+$bird: #F291A3;
+
+$bird-size: 60px;
 
 //default sets & designs
 *, *:before, *:after {
@@ -43,13 +46,14 @@ body {
   }
   h1 {
     color: $hover;
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
 
   //play section
   .game {
+    position: relative;
     height: calc(100vh - 80px); //Fallback for browsers that do not support Custom Properties
-    height: calc(var(--vh, 1vh) * 100 - 70px);
+    height: calc(var(--vh, 1vh) * 100 - 80px);
   }
 
   .play {
@@ -60,6 +64,15 @@ body {
     justify-content: center;
     align-items: center;
     color: $background;
+  }
+
+  .bird {
+    position: absolute;
+    top: 50px;
+    left: $bird-size;
+    width: $bird-size;
+    height: $bird-size;
+    color: $bird;
   }
 
   //game
