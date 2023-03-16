@@ -1,13 +1,16 @@
-import { dropBird, jumpBird, resetBird } from "./bird.js";
-import { birdStatus } from "./control.js";
+import { checkCrash, dropBird, jumpBird, resetBird, birdStatus as birdStatusBird } from "./bird.js";
+import { birdStatus as birdStatusControl } from "./control.js";
 
 resetBird();
 
 setInterval(updateGame, 10);
 
 function updateGame() {
-  if (birdStatus === "jump") {
-    jumpBird();
+  if (birdStatusBird === "alive") {
+    if (birdStatusControl === "jump") {
+      jumpBird();
+    }
+    dropBird();
+    checkCrash();
   }
-  dropBird();
 };

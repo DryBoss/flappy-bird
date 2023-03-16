@@ -1,4 +1,6 @@
-const p2p = document.querySelector(".play");
+import { birdStatus as birdStatusBird, resetBird } from "./bird.js";
+
+export const p2p = document.querySelector(".play");
 
 //game variables
 export let birdStatus = "drop";
@@ -8,6 +10,14 @@ window.addEventListener("keydown", event => {
     case "w":
     case "ArrowUp":
     case " ":
-      p2p.style.display = "none";
+      if (birdStatusBird === "dead") {
+        resetBird();
+        p2p.style.display = "none";
+      } else {
+        birdStatus = "jump";
+        setTimeout(() => {
+          birdStatus = "drop";
+        }, 300);
+      }
   }
 })
