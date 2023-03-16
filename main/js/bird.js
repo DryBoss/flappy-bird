@@ -31,7 +31,7 @@ export function jumpBird() {
 
 export function checkCrash() {
   if ( bird.getBoundingClientRect().top < 25 || 
-    bird.getBoundingClientRect().bottom > window.innerHeight
+    bird.getBoundingClientRect().bottom > (window.innerHeight - 1)
   ) {
     p2p.style.display = "flex";
     birdStatus = "dead";

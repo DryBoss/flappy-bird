@@ -65,7 +65,33 @@ h1 {
   left: 60px;
   width: 60px;
   height: 60px;
-  color: #F291A3;
+}
+
+.obstacles {
+  --obstacle-distance: 100;
+  --obstacle-position: 300;
+  --obstacle-gap: 120;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: calc(var(--obstacle-distance) * 1px);
+  width: 100px;
+}
+
+.obstacles > * {
+  position: absolute;
+  width: 100%;
+  background-color: #728C8A;
+}
+
+.obstacles > .top {
+  top: 0;
+  bottom: calc(var(--obstacle-position) * 1px);
+}
+
+.obstacles > .bottom {
+  top: calc(var(--vh, 1vh) * 100 - 80px - var(--obstacle-position) * 1px + var(--obstacle-gap) * 1px);
+  bottom: 0;
 }
 
 footer {
